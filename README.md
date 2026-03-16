@@ -28,6 +28,25 @@ Built for the <b>Status Network “Go Gasless” Hackathon</b> — $2,000 prize 
 </p>
 
 ---
+## 🎥 Demo Video
+
+<p align="center">
+
+<a href="https://drive.google.com/file/d/YOUR_VIDEO_ID/view">
+  <img src="https://img.shields.io/badge/Click%20to%20Watch-Demo%20Video-red?style=for-the-badge&logo=google-drive">
+</a>
+
+</p>
+
+## 📱 Download APK
+
+<p align="center">
+
+<a href="https://drive.google.com/file/d/YOUR_APK_ID/view">
+  <img src="https://img.shields.io/badge/Download-GhostPay%20APK-green?style=for-the-badge&logo=android">
+</a>
+
+</p>
 
 # 📋 Table of Contents
 
