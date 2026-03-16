@@ -1,245 +1,323 @@
 # 👻 GhostPay Agent — Status Network Hackathon
 
-[![Status](https://img.shields.io/badge/Status-Ready%20for%20Submission-brightgreen)](https://github.com/ghostpay/ghostpay-agent)
-[![Network](https://img.shields.io/badge/Network-Status%20Sepolia-purple)](https://sepoliascan.status.network)
-[![Gasless](https://img.shields.io/badge/Gas%20Price-$0-success)](https://sepoliascan.status.network/tx/0xef29b8ac4f75dd238b0eedd3d2962dad72491dc5339b70e9dec3045e7b45a520)
-[![License](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
+<p align="center">
 
-> 🤖 **AI-powered gasless payments** on Status Network Sepolia (Chain ID: 1660990954)  
-> Built for the **Status Network "Go Gasless" Hackathon** — $2,000 prize pool
+![Status](https://img.shields.io/badge/Status-Ready%20for%20Submission-brightgreen)  
+![Network](https://img.shields.io/badge/Network-Status%20Sepolia-purple)  
+![Gasless](https://img.shields.io/badge/Gas%20Price-$0-success)  
+![License](https://img.shields.io/badge/License-MIT-blue)
 
-**[Submission Ready](#-final-submission-packet) · [Quick Start](#-quick-start) · [Deployment](#-deploy--execute-gasless-stt-transaction) · [Compliance Check](#-run-compliance-check)**
+</p>
+
+<p align="center">
+
+🤖 <b>AI-powered gasless payments</b> on Status Network Sepolia  
+Chain ID: <b>1660990954</b>
+
+Built for the <b>Status Network “Go Gasless” Hackathon</b> — $2,000 prize pool
+
+</p>
+
+<p align="center">
+
+<a href="#-final-submission-packet">Submission Ready</a> •
+<a href="#-quick-start">Quick Start</a> •
+<a href="#-deploy--execute-gasless-stt-transaction">Deployment</a> •
+<a href="#-run-compliance-check">Compliance Check</a>
+
+</p>
 
 ---
 
-## 📋 Table of Contents
+# 📋 Table of Contents
 
-- [Overview](#-features)
-- [Deployed Contracts](#deployed-contracts)
-- [Gasless Proof](#-gasless-transaction-proof)
-- [Quick Start](#-quick-start)
-- [How It Works](#-ai-agent-flow)
-- [Deployment](#-deploy--execute-gasless-stt-transaction)
-- [Compliance Check](#-run-compliance-check)
-- [Submission Packet](#-final-submission-packet)
-- [Project Structure](#-project-structure)
-- [Configuration](#-configuration)
+- Features  
+- Deployed Contracts  
+- Gasless Proof  
+- Quick Start  
+- AI Agent Flow  
+- Deployment  
+- Compliance Check  
+- Final Submission Packet  
+- Project Structure  
+- Configuration  
 
 ---
 
-## ✨ Features
+# ✨ Features
 
 | Feature | Status |
-|---------|--------|
-| ✅ **Verified Smart Contract** | Status Network Sepolia |
-| ✅ **Gasless Transactions** | `effectiveGasPrice = 0` |
-| ✅ **Gasless ERC20 (STT)** | No ETH required, ever |
-| ✅ **AI Agent Component** | Rules engine + LLM intent parsing |
-| ✅ **Compliance Ready** | Passes all Status Track checks |
-| ✅ **Production Ready** | React Native + Expo |
+|-------|-------|
+| Verified Smart Contract | ✅ Status Network Sepolia |
+| Gasless Transactions | ✅ `effectiveGasPrice = 0` |
+| Gasless ERC20 (STT) | ✅ No ETH required |
+| AI Agent Component | ✅ Rules engine + LLM parsing |
+| Compliance Ready | ✅ Passes Status Track checks |
+| Production UI | ✅ React Native + Expo |
 
 ---
 
-## 🪙 Deployed Contracts
+# 🪙 Deployed Contracts
 
 | Contract | Address | Explorer |
-|----------|---------|---------|
-| **TestToken (STT)** | `0x2a7AB4Bb55bF459eB3F25D2f84e29d7CF6095047` | [View](https://sepoliascan.status.network/address/0x2a7AB4Bb55bF459eB3F25D2f84e29d7CF6095047) |
-| **GhostPay** | `0x56c33B35f979200FF17ff76678a6780024daDD4B` | [View](https://sepoliascan.status.network/address/0x56c33B35f979200FF17ff76678a6780024daDD4B) |
+|--------|--------|--------|
+| **TestToken (STT)** | `0x2a7AB4Bb55bF459eB3F25D2f84e29d7CF6095047` | https://sepoliascan.status.network/address/0x2a7AB4Bb55bF459eB3F25D2f84e29d7CF6095047 |
+| **GhostPay** | `0x56c33B35f979200FF17ff76678a6780024daDD4B` | https://sepoliascan.status.network/address/0x56c33B35f979200FF17ff76678a6780024daDD4B |
 
-> **Why STT?** Status Network Sepolia is **gasless at the protocol level** — `gasPrice = 0` always. ERC20 token transfers require **no ETH value at all** (only gasPrice=0), so this works even with 0 ETH balance. The AI agent drives each payment decision.
+**Why STT?**
 
-### ✅ Gasless Transaction Proof — ✔️ Verified
+Status Network Sepolia is **gasless at the protocol level**.
 
-- **Network:** Status Network Sepolia (Chain ID: 1660990954)
-- **Gasless TX Hash:** `0xef29b8ac4f75dd238b0eedd3d2962dad72491dc5339b70e9dec3045e7b45a520`
-- **Explorer:** https://sepoliascan.status.network/tx/0xef29b8ac4f75dd238b0eedd3d2962dad72491dc5339b70e9dec3045e7b45a520
-- **Method:** ERC20 `transfer()` (STT token) — `gasPrice = 0`
-- **Status:** ✅ READY for Status Track submission
-
-```json
-{
-  "chainId": 1660990954,
-  "tokenAddress": "0x2a7AB4Bb55bF459eB3F25D2f84e29d7CF6095047",
-  "tokenSymbol": "STT",
-  "txHash": "0xef29b8ac4f75dd238b0eedd3d2962dad72491dc5339b70e9dec3045e7b45a520",
-  "txStatus": 1,
-  "gasUsed": "52461",
-  "effectiveGasPrice": "0",
-  "gaslessByPrice": true,
-  "gaslessByCost": true,
-  "explorerUrl": "https://sepoliascan.status.network/tx/0xef29b8ac4f75dd238b0eedd3d2962dad72491dc5339b70e9dec3045e7b45a520"
-}
 ```
+gasPrice = 0
+```
+
+This allows ERC20 transfers without paying gas fees.
 
 ---
 
-## 🚀 Quick Start
+# ⚡ Gasless Transaction Proof
+
+Network
+
+```
+Status Network Sepolia
+Chain ID: 1660990954
+```
+
+Transaction Hash
+
+```
+0xef29b8ac4f75dd238b0eedd3d2962dad72491dc5339b70e9dec3045e7b45a520
+```
+
+Explorer
+
+https://sepoliascan.status.network/tx/0xef29b8ac4f75dd238b0eedd3d2962dad72491dc5339b70e9dec3045e7b45a520
+
+Gas Information
+
+```
+effectiveGasPrice: 0
+gaslessByPrice: true
+gaslessByCost: true
+```
+
+This confirms the transaction executed **with zero gas cost**.
+
+---
+
+# 🚀 Quick Start
+
+Install dependencies
 
 ```bash
 npm install
-npm start
-# Press 'a' for Android
 ```
 
----
-
-## 🤖 AI Agent Flow
-
-```
-User prompt → AI parses intent (amount, receiver) → Rule engine verifies
-             → Sponsor key signs → Gasless STT transfer on Status Sepolia
-             → TX hash returned to app
-```
-
-### AI Components
-
-1. **`services/agentService.js`** — Rule-based decision engine (daily limits, blacklist, cooldown checks)
-2. **`services/ollamaAgentService.js`** — Ollama LLM intent parsing ("Send 10 STT to 0x...") with rule-based fallback
-3. **`services/blockchainService.js`** — `sendSTTPayment()` executes the gasless ERC20 transfer
-
----
-
-## ⛓️ Deploy & Execute Gasless STT Transaction
-
-### Option A — One Command (Recommended)
+Run the app
 
 ```bash
-# Uses the embedded sponsor key — no ETH needed
+npm start
+```
+
+For Android (Expo)
+
+```
+Press 'a'
+```
+
+---
+
+# 🤖 AI Agent Flow
+
+```
+User Prompt
+      ↓
+AI parses intent (amount + receiver)
+      ↓
+Rule engine verification
+      ↓
+Sponsor wallet signs transaction
+      ↓
+Gasless STT transfer on Status Network
+      ↓
+Transaction hash returned to user
+```
+
+---
+
+# 🧠 AI Components
+
+### services/agentService.js
+
+Rule-based engine for:
+
+- daily spending limits
+- blacklist checks
+- cooldown validation
+
+### services/ollamaAgentService.js
+
+LLM intent parsing using **Ollama**
+
+Example command:
+
+```
+Send 10 STT to 0x123...
+```
+
+### services/blockchainService.js
+
+Handles blockchain interaction.
+
+```
+sendSTTPayment()
+```
+
+Executes the gasless ERC20 transfer.
+
+---
+
+# ⛓️ Deploy & Execute Gasless STT Transaction
+
+### Option A — One Command
+
+```
 npm run gasless:stt
+```
 
-# With custom receiver:
+Custom receiver
+
+```
 RECEIVER_ADDRESS=0xYourAddress npm run gasless:stt
+```
 
-# With existing token (skip deploy):
+Use existing token
+
+```
 TEST_TOKEN_ADDRESS=0x2a7AB4Bb55bF459eB3F25D2f84e29d7CF6095047 npm run gasless:stt
 ```
 
-### Option B — MetaMask via App
+---
 
-1. Add Status Network to MetaMask:
-   - **Chain ID:** 1660990954
-   - **RPC:** `https://public.sepolia.rpc.status.network`
-   - **Explorer:** https://sepoliascan.status.network
+### Option B — MetaMask
 
-2. Import STT token: `0x2a7AB4Bb55bF459eB3F25D2f84e29d7CF6095047`
+Add network
 
-3. Launch app → Wallet screen → Connect MetaMask → Payment screen → Send STT
-
-### Option C — Script with Private Key
-
-```bash
-PRIVATE_KEY=0x... npm run gasless:stt
 ```
+Chain ID: 1660990954
+RPC: https://public.sepolia.rpc.status.network
+Explorer: https://sepoliascan.status.network
+```
+
+Import STT token
+
+```
+0x2a7AB4Bb55bF459eB3F25D2f84e29d7CF6095047
+```
+
+Then send STT through the app UI.
 
 ---
 
-## ✅ Run Compliance Check
+# ✅ Run Compliance Check
 
-```bash
-# Verify STT token transfer (ERC20) — Current verified transaction
+```
 TOKEN_ADDRESS=0x2a7AB4Bb55bF459eB3F25D2f84e29d7CF6095047 \
 TX_HASH=0xef29b8ac4f75dd238b0eedd3d2962dad72491dc5339b70e9dec3045e7b45a520 \
 npm run check:stt
 ```
 
-**Expected Output:**  
-```
-🎉 Result: READY for strict Status track submission checks.
-```
-
----
-
-## 📋 Final Submission Packet
+Expected Output
 
 ```
-Track:              Status Network — Go Gasless
-Network:            Status Network Sepolia (Chain ID: 1660990954)
-Token (STT):        0x2a7AB4Bb55bF459eB3F25D2f84e29d7CF6095047
-├─ Token URL:      https://sepoliascan.status.network/address/0x2a7AB4Bb55bF459eB3F25D2f84e29d7CF6095047
-Contract (GhostPay): 0x56c33B35f979200FF17ff76678a6780024daDD4B
-├─ Contract URL:   https://sepoliascan.status.network/address/0x56c33B35f979200FF17ff76678a6780024daDD4B
-Gasless TX:         0xef29b8ac4f75dd238b0eedd3d2962dad72491dc5339b70e9dec3045e7b45a520
-├─ TX URL:         https://sepoliascan.status.network/tx/0xef29b8ac4f75dd238b0eedd3d2962dad72491dc5339b70e9dec3045e7b45a520
-├─ effectiveGasPrice: 0
-├─ gaslessByPrice: ✅ true
-└─ gaslessByCost:  ✅ true
-AI Agent:           services/agentService.js + services/ollamaAgentService.js
-README:             This file
-Status:             ✅ READY FOR SUBMISSION
+READY for Status Network submission
 ```
 
 ---
 
-## 📁 Project Structure
+# 📦 Final Submission Packet
 
 ```
-ghostpay-agent/
-├── contracts/
-│   ├── TestToken.sol          # STT ERC20 token (gasless transfers)
-│   ├── GhostPay.sol           # Payment contract (sendPayment)
-│   ├── GhostPayAgent.sol      # Advanced agent contract
-│   └── contractConfig.js      # ABI + deployed addresses
-├── scripts/
-│   ├── deployAndTransferSTT.js   # ← Main: deploy STT + gasless transfer
-│   ├── checkSTTCompliance.js     # ← STT-based track check
-│   ├── deploy.js                 # Deploy GhostPay contract
-│   ├── deployTestToken.js        # Deploy STT only
-│   ├── transferTestToken.js      # Transfer STT only
-│   ├── executeGaslessTx.js       # ETH-based gasless tx (needs ETH balance)
-│   └── checkTrackCompliance.js   # Original ETH contract track check
-├── services/
-│   ├── agentService.js           # AI rule engine
-│   ├── ollamaAgentService.js     # Ollama LLM intent parser
-│   └── blockchainService.js      # sendSTTPayment() + sendPayment()
-├── screens/
-│   ├── PaymentScreen.js          # UI: send STT or ETH
-│   ├── HomeScreen.js             # Dashboard
-│   └── WalletScreen.js           # MetaMask connect
-└── config/
-    └── constants.js              # Status Network RPC, chain ID, sponsor key
+Track: Status Network — Go Gasless
+Network: Status Network Sepolia (Chain ID: 1660990954)
+
+Token (STT)
+0x2a7AB4Bb55bF459eB3F25D2f84e29d7CF6095047
+
+GhostPay Contract
+0x56c33B35f979200FF17ff76678a6780024daDD4B
+
+Gasless Transaction
+0xef29b8ac4f75dd238b0eedd3d2962dad72491dc5339b70e9dec3045e7b45a520
+
+effectiveGasPrice: 0
+gaslessByPrice: true
+gaslessByCost: true
+
+AI Agent
+services/agentService.js  
+services/ollamaAgentService.js
+
+Status: READY FOR SUBMISSION
 ```
 
 ---
 
-## 🔧 Configuration
+# 📁 Project Structure
 
-1. `contracts/contractConfig.js` — `CONTRACT_ADDRESS` (GhostPay deployed)
-2. `services/blockchainService.js` — `STT_TOKEN_ADDRESS` (STT deployed)
-3. `config/constants.js` — `sponsorPrivateKey` — embedded for testnet (no env var needed)
-4. Optional: set `EXPO_PUBLIC_PAYER_PRIVATE_KEY` env var to override sponsor key
+```
+ghostpay-agent
+│
+├─ contracts
+│  ├─ TestToken.sol
+│  ├─ GhostPay.sol
+│  ├─ GhostPayAgent.sol
+│  └─ contractConfig.js
+│
+├─ scripts
+│  ├─ deployTestToken.js
+│  ├─ transferTestToken.js
+│  ├─ deployAndTransferSTT.js
+│  └─ checkSTTCompliance.js
+│
+├─ services
+│  ├─ agentService.js
+│  ├─ ollamaAgentService.js
+│  └─ blockchainService.js
+│
+├─ screens
+│  ├─ PaymentScreen.js
+│  ├─ WalletScreen.js
+│  └─ HomeScreen.js
+│
+└─ config
+   └─ constants.js
+```
 
 ---
 
-## 🧠 AI Agent (Ollama + Fallback)
+# ⚙️ Configuration
 
-- **Ollama:** Install [Ollama](https://ollama.ai), run `ollama pull llama3.2`. Parses natural language: *"Send 10 STT to 0x1234... for coffee"*
-- **Fallback:** Regex-based intent parsing works without Ollama installed
+Update these files if deploying your own contracts.
 
----
+```
+contracts/contractConfig.js
+services/blockchainService.js
+config/constants.js
+```
 
-## 🤝 Contributing
+Optional environment variable
 
-Found a bug or have a feature request? [Open an issue](https://github.com/ghostpay/ghostpay-agent/issues) or submit a PR!
-
----
-
-## 📄 License
-
-MIT License © 2026 GhostPay  
-Built for Status Network hackathon.
+```
+EXPO_PUBLIC_PAYER_PRIVATE_KEY
+```
 
 ---
 
-<div align="center">
+# 📄 License
 
-**[🔗 View on GitHub](https://github.com/ghostpay/ghostpay-agent)**  
-**[🌐 Status Network](https://status.im)**  
-**[🏆 Hackathon Details](https://status.im/en/go-gasless-hackathon)**
+MIT License
 
-Made with ❤️ for gasless transactions
-
-</div>
-#   G h o s t p a y - A g e n t 
- 
- 
+Built for the **Status Network Gasless Hackathon**
