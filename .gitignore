@@ -1,15 +1,23 @@
 # Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
 
-# dependencies
+# ==================== DEPENDENCIES ====================
 node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
 
-# Expo
+# ==================== EXPO & REACT NATIVE ====================
 .expo/
+.expo-shared/
 dist/
+dist-web/
 web-build/
 expo-env.d.ts
+eas-build-job-*.json
 
-# Native
+# Native builds
+/ios
+/android
 .kotlin/
 *.orig.*
 *.jks
@@ -17,27 +25,95 @@ expo-env.d.ts
 *.p12
 *.key
 *.mobileprovision
+*.p7b
+*.pfx
+*.zip
 
-# Metro
+# Metro bundler
 .metro-health-check*
+.haste_cache/
 
-# debug
+# ==================== DEBUG & LOGS ====================
 npm-debug.*
 yarn-debug.*
 yarn-error.*
+*.log
+*.logs
+lerna-debug.log*
+.pnpm-debug.log*
 
-# macOS
-.DS_Store
+# ==================== BUILD & OUTPUT ====================
+build/
+dist/
+out/
+coverage/
+.next/
+.turbo/
+
+# ==================== ENVIRONMENT & SECRETS ====================
+# Never commit private keys or secrets!
+.env
+.env.local
+.env.*.local
+.env.production.local
+.env.development.local
+.env.test.local
+PRIVATE_KEY
+PRIVATE_KEYS
 *.pem
+*.key
+.firebase/
+.firebaserc
 
-# local env files
-.env*.local
+# ==================== IDE & EDITOR ====================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.netrwhist
+*.sublime-project
+*.sublime-workspace
+.project
+.settings/
+*.tmproj
+.vscode-test
+.history/
 
-# typescript
+# ==================== OS ====================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ==================== TYPESCRIPT ====================
 *.tsbuildinfo
+*.ts.js
+dist/
+build/
 
+# ==================== BLOCKCHAIN & WEB3 ====================
+# Private keys, mnemonic seeds, hardhat artifacts
+.env.secret
+.hardhat/
+cache/
+artifacts/
+typechain/
+typechain-types/
+
+# ==================== MISC ====================
 app-example
-
-# generated native folders
-/ios
-/android
+Untitled
+.cache
+.temp
+temp/
+tmp/
+*.bak
+*.swp
+.venv/
+venv/
+.pytest_cache/
