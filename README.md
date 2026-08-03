@@ -38,54 +38,54 @@ Selected as one of the winning submissions from the **Status Network Go Gasless 
 
 ## 🚀 Overview
 
-GhostPay Agent is an AI-powered payment assistant 🏆 Winning project of the Status Network "Go Gasless" Hackathon 2026
+GhostPay Agent is an AI-powered payment assistant built on **Status Network Sepolia** that enables **gasless ERC20 token transfers** using natural language.
 
-Built on Status Network Sepolia with AI-powered gasless ERC20 payments.
+🏆 **Selected as an official winning submission in the Status Network "Go Gasless" Hackathon 2026**, GhostPay combines AI-powered intent parsing, a configurable rule engine, and smart contracts to make blockchain payments simpler and more accessible.
 
-The application enables users to send **gasless ERC20 token transfers** using natural language while leveraging an AI agent to interpret payment intent, enforce compliance rules, and execute transactions on **Status Network Sepolia**.
+Unlike traditional wallets, users simply describe what they want to do, while the AI interprets the request, validates it, and executes a **gasless blockchain transaction** behind the scenes.
 
-Unlike traditional wallets, GhostPay allows users to simply describe what they want to do, and the AI handles the blockchain interaction behind the scenes.
-![Winner](https://img.shields.io/badge/Hackathon-Winner-gold?style=for-the-badge)
+
+![Hackathon Winner](https://img.shields.io/badge/Hackathon-Winning%20Project-yellow?style=for-the-badge)
 ![Prize](https://img.shields.io/badge/Prize-$117.65-success?style=for-the-badge)
 ![Status Network](https://img.shields.io/badge/Status-Network-purple?style=for-the-badge)
 
 ---
 
-# ✨ Highlights
+## ✨ Highlights
 
-✅ Winner — Status Network Go Gasless Hackathon
-
-✅ Prize Winner ($117.65 USD)
-
-✅ AI-powered payment assistant
-
-✅ Natural language transactions
-
-✅ Gasless ERC20 transfers
-
-✅ Smart contract deployment
-
-✅ React Native mobile wallet
-
-✅ Ollama-powered AI
-
-✅ Production-ready architecture
-
+- 🏆 Winning Project – Status Network "Go Gasless" Hackathon 2026
+- 💰 Prize Recipient – $117.65 USD
+- 🤖 AI-powered payment assistant
+- ⚡ Gasless ERC20 transactions
+- 💬 Natural language transaction execution
+- 📱 Cross-platform React Native application
+- 🔐 Smart contract security with rule validation
+- 🌐 Built on Status Network Sepolia
 ---
 
-# 🏅 Achievement
+## 🏅 Achievement
 
-GhostPay Agent was selected as one of the winning projects in the **Status Network Go Gasless Hackathon**.
+GhostPay Agent was selected as one of the official winning submissions in the **Status Network "Go Gasless" Hackathon 2026**.
 
-### Result
+### Recognition
 
-🏆 Winner
+🏆 Winning Submission
 
-💰 Prize: **$117.65 USD**
+💰 Prize Awarded: **$117.65 USD**
 
-📅 2026
+🌐 Network: **Status Network Sepolia**
 
-The project demonstrated how AI agents can execute secure, gasless blockchain payments using natural language while leveraging the Status Network's zero-gas infrastructure.
+The project demonstrates how AI agents can execute secure, natural-language, gasless blockchain payments while leveraging Status Network's zero-gas infrastructure.
+
+## 📊 Repository
+
+- AI-Powered Payment Assistant
+- React Native + Expo
+- Solidity Smart Contracts
+- Hardhat
+- ethers.js
+- Ollama Integration
+- Gasless ERC20 Transfers
 
 # 🎥 Demo
 
@@ -402,10 +402,10 @@ READY FOR SUBMISSION
 - [x] Mobile Wallet
 - [x] Smart Contracts
 - [x] Status Integration
-- [ ] Voice Payments
-- [ ] QR Payments
-- [ ] Multi-token Support
-- [ ] Cross-chain Payments
+- [x] Voice Payments
+- [x] QR Payments
+- [x] Multi-token Support
+- [x] Cross-chain Payments
 
 ---
 
@@ -487,7 +487,7 @@ GitHub: https://github.com/harichopper
 
 Portfolio: https://harichopper.github.io/portfolio/
 
-LinkedIn: *(add your profile)*
+LinkedIn: https://www.linkedin.com/in/hariharan-r-32672a293/
 
 ---
 
