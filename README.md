@@ -44,10 +44,17 @@ GhostPay Agent is an AI-powered payment assistant built on **Status Network Sepo
 
 Unlike traditional wallets, users simply describe what they want to do, while the AI interprets the request, validates it, and executes a **gasless blockchain transaction** behind the scenes.
 
+<br>
+
+<p align="center">
 
 ![Hackathon Winner](https://img.shields.io/badge/Hackathon-Winning%20Project-yellow?style=for-the-badge)
-![Prize](https://img.shields.io/badge/Prize-$117.65-success?style=for-the-badge)
+&nbsp;
+![Prize](https://img.shields.io/badge/Prize-%24117.65-success?style=for-the-badge)
+&nbsp;
 ![Status Network](https://img.shields.io/badge/Status-Network-purple?style=for-the-badge)
+
+</p>
 
 ---
 
